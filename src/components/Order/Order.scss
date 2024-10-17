@@ -1,0 +1,57 @@
+.order {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+  img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+     h2 {
+    font-size: 1.14px;
+    color: #333;
+  }
+  }
+  
+
+  
+
+  
+  .order-right p {
+    margin: 5px 0;
+    font-weight: 700px;
+  }
+  
+//   .order-actions {
+//     display: flex;
+//     justify-content: space-between;
+//     margin-top: 10px;
+//   }
+  
+  .add-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .add-button.added {
+    background-color: #dc3545; // Изменение цвета для добавленного товара
+  }
+  .button-bottom{
+    color: white;
+    background: #9DD458;
+    border: none;
+    border-radius: 18px;
+    width: 245px;
+    height: 55px;
+    font-size: 16px;
+    line-height: 19.36px;
+    margin-top: 30px;
+  }
+  

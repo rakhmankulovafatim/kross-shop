@@ -1,0 +1,112 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    h1{
+        font-size: 20px;
+        margin-top: 10px;
+        margin-left: 20px;
+        font-weight: 400px;
+    }
+    .h_right{
+        display: flex;
+        column-gap: 30px;
+        
+    }
+    .h_left{
+        display: flex;
+        column-gap: 20px;
+        
+    }
+
+    .h_item{
+        display: flex;
+        column-gap: 10px;
+        cursor: pointer;
+        transition: opacity 500ms ease;
+
+    }
+    .h_item:hover{
+        // opacity: 0.5;
+    }
+    .shop-cart-button.active,
+    .shop-cart-button.hover{
+        color: aquamarine;
+    }
+
+}
+
+.overlay {
+    position: fixed; // Фиксируем подложку
+    top: 0;
+    left: 0;
+    width: 100vw; // Полная ширина
+    height: 100vh; // Полная высота
+    background: rgba(0, 0, 0, 0.5); // Полупрозрачный черный фон
+    z-index: 900; // Под корзиной
+    opacity: 0; // Начальное состояние
+    transition: opacity 0.3s ease; // Плавный переход
+  }
+  
+  .overlay.active {
+    opacity: 1; // Показать подложку
+  }
+  
+  .shop-cart {
+    position: fixed; // Используем fixed, чтобы оставалась на месте при прокрутке
+    top: 0;
+    right: 0;
+    width: 30vw; // Половина ширины экрана
+    height: 100vh; // Полная высота экрана
+    background: rgb(252, 252, 252); // Цвет корзины
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    transition: transform 0.3s ease; // Плавный переход при открытии/закрытии
+    transform: translateX(100%); // Скрытое состояние
+  
+    &.active {
+      transform: translateX(0); // Показать корзину
+    }
+  
+    .order {
+      width: 100%;
+  
+      .img {
+        width: 50px; // Измените размер изображения, если необходимо
+        float: left; 
+        margin-right: 20px;
+      }
+    }
+  }
+  .button{
+    color: white;
+    background: #9DD458;
+    border: none;
+    border-radius: 18px;
+    width: 245px;
+    height: 55px;
+    font-size: 16px;
+    line-height: 19.36px;
+    margin-top: 30px;
+  }
+  .shop-cart-cart{
+    margin-top: 170px;
+   text-align: center;
+   h2{
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 22px;
+   }
+   p{
+    margin-top: 10px;
+    font-weight: 400;
+    color: #c7c7c7;
+
+   }
+  }
+  .arrow{
+    margin-right: 10px;
+    // margin-top: 10px;
+  }
