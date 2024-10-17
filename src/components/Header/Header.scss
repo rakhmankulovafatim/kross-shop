@@ -37,44 +37,44 @@
 }
 
 .overlay {
-    position: fixed; // Фиксируем подложку
+    position: fixed; 
     top: 0;
     left: 0;
-    width: 100vw; // Полная ширина
-    height: 100vh; // Полная высота
-    background: rgba(0, 0, 0, 0.5); // Полупрозрачный черный фон
-    z-index: 900; // Под корзиной
-    opacity: 0; // Начальное состояние
-    transition: opacity 0.3s ease; // Плавный переход
+    width: 100vw; 
+    height: 100vh; 
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 900; 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
   }
   
   .overlay.active {
-    opacity: 1; // Показать подложку
+    opacity: 1; 
   }
   
   .shop-cart {
-    position: fixed; // Используем fixed, чтобы оставалась на месте при прокрутке
+    position: fixed;
     top: 0;
     right: 0;
-    width: 30vw; // Половина ширины экрана
-    height: 100vh; // Полная высота экрана
-    background: rgb(252, 252, 252); // Цвет корзины
+    width: 30vw;
+    height: 100vh; 
+    background: rgb(252, 252, 252); 
     z-index: 1000;
     display: flex;
     flex-direction: column;
     padding: 10px;
-    transition: transform 0.3s ease; // Плавный переход при открытии/закрытии
-    transform: translateX(100%); // Скрытое состояние
+    transition: transform 0.3s ease; 
+    transform: translateX(100%); 
   
     &.active {
-      transform: translateX(0); // Показать корзину
+      transform: translateX(0); 
     }
   
     .order {
       width: 100%;
   
       .img {
-        width: 50px; // Измените размер изображения, если необходимо
+        width: 50px; 
         float: left; 
         margin-right: 20px;
       }

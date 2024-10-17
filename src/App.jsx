@@ -12,7 +12,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [orders, setOrders] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const [addedItems, setAddedItems] = useState([]); // Состояние для отслеживания добавленных товаров
+  const [addedItems, setAddedItems] = useState([]); 
 
   useEffect(() => {
     fetch('http://localhost:3001/product')
@@ -36,7 +36,7 @@ function App() {
     const inArray = orders.some(order => order.id === item.id);
     if (!inArray) {
       setOrders(prevOrders => [...prevOrders, item]);
-      setAddedItems(prev => [...prev, item.id]); // Добавляем ID товара в массив добавленных
+      setAddedItems(prev => [...prev, item.id]); 
     }
   };
 
@@ -77,7 +77,7 @@ function App() {
                   <button className='button-pr' onClick={() => addToOrder(product)}>
                     <CiSquarePlus className='button-pru' />
                   </button>
-                  {/* Условный рендеринг иконки "галочка" */}
+                  
                   {addedItems.includes(product.id) && (
                     <TiTick className='added-icon' style={{ color: 'green' }} />
                   )}

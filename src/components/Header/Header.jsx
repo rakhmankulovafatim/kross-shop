@@ -10,19 +10,19 @@ import { FaArrowLeft } from "react-icons/fa";
 
 export default function Header({ orders, setOrders }) {
   const [cartOpen, setCartOpen] = useState(false);
-  const [addedItems, setAddedItems] = useState({}); // Состояние для отслеживания добавленных товаров
+  const [addedItems, setAddedItems] = useState({}); 
   const navigate = useNavigate();
 
   const removeFromOrder = (id) => {
     setOrders(prevOrders => prevOrders.filter(order => order.id !== id));
-    setAddedItems(prev => ({ ...prev, [id]: false })); // Удаляем галочку
+    setAddedItems(prev => ({ ...prev, [id]: false })); 
   };
 
   const addToOrder = (item) => {
     const inArray = orders.some(order => order.id === item.id);
     if (!inArray) {
       setOrders(prevOrders => [...prevOrders, item]);
-      setAddedItems(prev => ({ ...prev, [item.id]: true })); // Устанавливаем галочку
+      setAddedItems(prev => ({ ...prev, [item.id]: true })); 
     }
   };
 
@@ -35,8 +35,8 @@ export default function Header({ orders, setOrders }) {
   };
 
   const handleBackButtonClick = () => {
-    setCartOpen(false); // Закрыть корзину
-    navigate('/'); // Перейти на главную страницу
+    setCartOpen(false); 
+    navigate('/'); 
   };
 
   return (
@@ -92,7 +92,7 @@ export default function Header({ orders, setOrders }) {
                 key={el.id} 
                 item={el} 
                 onRemove={removeFromOrder} 
-                isAdded={addedItems[el.id] || false} // Передаем состояние добавления
+                isAdded={addedItems[el.id] || false} 
                 onAdd={addToOrder}
               />
             ))}
